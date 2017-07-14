@@ -1,0 +1,31 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    printf("O hai!");
+    float n=-324;
+    while(n<0){
+        	printf("How much change is owed?\n");
+   			n=GetFloat();
+    }
+    int m=0;
+    n=n*100;
+    while(n>24){
+		m++;
+        n-=25;
+    }
+	while(n>9){
+		m++;
+        n-=10;
+    }
+    while(n>4){
+	m++;
+        n-=5;
+    }
+    while(n>0){
+	m++;
+        n-=1;
+    }
+   printf("%i", m);
+}
